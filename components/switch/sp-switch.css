@@ -1,5 +1,7 @@
 .sp-switch{
+ cursor: pointer;
 }
 .sp-switch > span {
  margin-left: -.3rem;
+ cursor: pointer;
 }

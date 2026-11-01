@@ -1,8 +1,10 @@
 .sp-radio {
+ cursor: pointer;
  margin-left: .17rem;
  margin-right: .7rem;
 }
 
 .sp-radio > span {
+ cursor: pointer;
  margin-left: -.3rem;
 }

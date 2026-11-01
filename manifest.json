@@ -1,7 +1,7 @@
 {
  "id": "uxp_psd_cha0-cu-helper",
  "name": "uxp_psd_cha0-cu-helper",
- "version": "0.0.10",
+ "version": "1.0.0",
  "main": "index.html",
  "host": {
   "app": "PS",
@@ -50,7 +50,7 @@
     }
    ],
    "label": {
-    "default": "cha0-cu-helper"
+    "default": "cha0-cu-helper 1.0.0"
    }
   }
  ],

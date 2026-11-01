@@ -1,6 +1,8 @@
 .sp-checkbox{
+ cursor: pointer;
  margin-right: .7rem;
 }
 .sp-checkbox > span{
+ cursor: pointer;
  margin-left: -.3rem;
 }
