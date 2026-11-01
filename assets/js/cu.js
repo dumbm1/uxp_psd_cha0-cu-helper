@@ -18,14 +18,21 @@ async function f() {
  let rmMask = {
   "_obj": "delete",
   "_target": [{
-    "_enum": "ordinal",
-    "_ref": "channel",
-    "_value": "targetEnum",
-   }],
+   "_enum": "ordinal",
+   "_ref": "channel",
+   "_value": "targetEnum",
+  }],
  };
  const cuChannels = [];
- let cuName = 'cu+2_';
+
  const cuChboxes = document.getElementById('section_cu').querySelectorAll('sp-checkbox');
+
+ const CU_RANGE_PRIVATE = 255;
+ const CU_RANGE_PUBLIC = 100;
+ const cuRangeFactor = CU_RANGE_PRIVATE / CU_RANGE_PUBLIC;
+ let cuUserInputValue = +document.getElementsByClassName('sp-textfield_number-in-head')[0].value;
+ let cuCalcValue = CU_RANGE_PRIVATE - Math.round(cuRangeFactor * cuUserInputValue);
+ let cuName = 'cu+'+ cuUserInputValue + '_';
 
  for (let i = 0; i < cuChboxes.length; i++) {
   let cuChbox = cuChboxes[i];
@@ -36,7 +43,7 @@ async function f() {
   if (cuChbox.value === 'black') {
    cuName += 'K';
   } else {
-   cuName += cuChbox.value.slice(0, 1).toUpperCase() ;
+   cuName += cuChbox.value.slice(0, 1).toUpperCase();
   }
  }
  if (!cuChboxes.length) return;
@@ -57,8 +64,8 @@ async function f() {
     },
     {
      "_obj": "paint",
-     "horizontal": 250.0,
-     "vertical": 250.0,
+     "horizontal": cuCalcValue,
+     "vertical": cuCalcValue,
     },
    ],
   };
@@ -84,7 +91,6 @@ async function f() {
     },
    },
   },
-
   // Set current layer
   {
    "_obj": "set",
@@ -121,8 +127,8 @@ async function f() {
   },
  ];
 
- if (document.getElementById('link_to_lay_cu').checked&& !hasLinkedLay()) commands.push(linkCu);
- if (document.getElementById('rm_mask_cu').checked)  commands.push(rmMask);
+ if (document.getElementById('link_to_lay_cu').checked && !hasLinkedLay()) commands.push(linkCu);
+ if (document.getElementById('rm_mask_cu').checked) commands.push(rmMask);
 
  async function cu(executionContext, descriptor) {
   let commands = descriptor.commands;

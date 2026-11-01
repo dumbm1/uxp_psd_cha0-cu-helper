@@ -3,19 +3,24 @@
 <head>
  <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>cha0-cu2-helper-uxp-psd-plug</title>
+ <title>cha0-cu-helper-uxp-psd-plug</title>
  <link rel="stylesheet" href="assets/css/main.css">
  <link rel="stylesheet" href="components/footer/footer.css">
  <link rel="stylesheet" href="components/button/sp-button/sp-button.css">
  <link rel="stylesheet" href="components/checkbox/sp-checkbox.css">
  <link rel="stylesheet" href="components/radio/sp-radio.css">
  <link rel="stylesheet" href="components/switch/sp-switch.css">
+ <link rel="stylesheet" href="components/textfield/sp-textfield.css">
 </head>
 
 <body>
 
 <div id="section_cu">
- <sp-heading size="s">Затянуть в 2%</sp-heading>
+ <sp-heading size="s" style="position: relative;">
+  <span>Затянуть в</span>
+  <sp-textfield class="sp-textfield_number-in-head" size="s" type="number" value="2"></sp-textfield>
+   <span>%</span>
+ </sp-heading>
  <sp-radio-group id="radio_group_cu">
   <sp-label style="min-width: 3rem">кроме</sp-label>
   <sp-radio size="s" class="sp-radio" value="cyan"><span>C</span></sp-radio>
@@ -71,7 +76,7 @@
 <!--<sp-button id="btnTest">тестовая кнопка</sp-button>-->
 
 <script src="assets/js/hasLinkedLay.js"></script>
-<script src="assets/js/cu2.js"></script>
+<script src="assets/js/cu.js"></script>
 <script src="assets/js/cha0.js"></script>
 <script src="assets/js/radioCheckboxHandler.js"></script>
 <!--<script src="assets/js/test.js"></script>-->
