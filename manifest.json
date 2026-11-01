@@ -1,7 +1,7 @@
 {
  "id": "uxp_psd_cha0-cu2-helper",
  "name": "uxp_psd_cha0-cu2-helper",
- "version": "0.0.8",
+ "version": "0.0.9",
  "main": "index.html",
  "host": {
   "app": "PS",
@@ -50,7 +50,7 @@
     }
    ],
    "label": {
-    "default": "Затянуть в 2%, прибить в 0%"
+    "default": "cha0-cu2-helper"
    }
   }
  ],
